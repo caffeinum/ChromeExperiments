@@ -1,0 +1,151 @@
+<html>
+    <head>
+        <title>CSS Showcase</title>
+        <style>
+          .btn {
+            width: fit-content;
+            padding: 5px;
+            margin: 5px;
+
+            outline: solid 0 blue;
+            border: solid 1px blue;
+            font-family: sans-serif;
+            cursor: pointer;
+          }
+
+          .btn.btn-primary {
+            background: blue;
+            color: white;
+          }
+
+          .btn.btn-secondary {
+            color: blue;
+          }
+
+          .btn.btn-delete {
+            border-color: red;
+            outline-color: red;
+            background: red;
+            color: white;
+          }
+
+          .btn:hover {
+            outline-width: 2px;
+          }
+
+          .alert {
+            width: fit-content;
+            padding: 10px;
+            background: red;
+            color: white;
+          }
+
+
+          .menu a {
+            width: 100px;
+            padding: 5px;
+          }
+          
+          .menu.vertical-menu a {
+            display: block;
+          }
+
+          .menu a:hover {
+            background: blue;
+            color: white;
+          }
+
+          button.like {
+            /* background: white; */
+          }
+
+          button.like:hover {
+            background: blue;
+          }
+
+          .emoji-selector {
+            width: fit-content;
+            border: solid 2px blue;
+            cursor: pointer;
+          }
+
+          .emoji-selector span {
+            padding: 5px;
+          }
+
+          .emoji-selector span:hover {
+            background: blue;
+          }
+
+        </style>
+    </head>
+    <body>
+      <p>
+        <!-- Buttons -->
+        <!-- Button Primary -->
+        <div class="btn btn-primary">Download</div>
+        <!-- Button Secondary -->
+        <div class="btn btn-secondary">Show More...</div>
+        <!-- Button Delete -->
+        <div class="btn btn-delete">Remove All</div>
+
+      <p>
+        <!-- Popup Alert  -->
+        <div class="alert alert-popup">
+          You have 3 new messages!
+        </div>
+
+        <!-- Inline Alert  -->
+        <div class="alert alert-inline">
+          You have 3 new messages!
+        </div>
+
+
+      <p>
+        <!-- Vertical Menu -->
+        <nav class="menu vertical-menu">
+          <a href="help.html">
+            Gallery
+          </a>
+          <a href="help.html">
+            Help & Feedback
+          </a>
+        </nav>
+
+      <p>
+        <!-- Horizontal Menu -->
+        <nav class="menu horizontal-menu">
+          <a href="help.html">
+            Gallery
+          </a>
+          <a href="help.html">
+            Help & Feedback
+          </a>
+        </nav>
+
+      <p>
+        <!-- Like Button -->
+        <button class="like">
+          Like 👍
+        </button>
+
+        <!-- Like Button -->
+        <button class="like heart">
+          ❤️
+        </button>
+
+      <p>
+        <div class="emoji-selector">
+          <span>❤️</span>
+          <span>😂</span>
+          <span>🔥</span>
+          <span>😍</span>
+          <span>😊</span>
+          <span>🥰</span>
+          <span>🥺</span>
+          <span>🤔</span>
+          <span>👍</span>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,14 @@
+.alert {
+  background: red;
+  color: white;
+
+  font-size: 32px;
+}
+
+.alert a {
+  color: white;
+}
+
+#error-message {
+  border: solid 1px red;
+}
