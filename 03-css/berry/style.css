@@ -1,0 +1,95 @@
+.meme {
+  width: 500px;
+  height: 400px;
+}
+
+.meme img {
+  width: 100%;
+}
+
+.caption {
+  color: white;
+  text-transform: uppercase;
+  font-family: Impact;
+  font-size: 32px;
+  text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+}
+
+
+  /* Position */
+  .meme.meme-position {
+    position: relative;
+    background: white;
+
+  }
+
+  .meme.meme-position img {
+    position: relative;
+    margin: 60px 0;
+  }
+
+  .meme.meme-position span {
+    position: absolute;
+    display: block;
+    text-align: center;
+
+    width: 100%;
+    height: auto;
+  }
+
+  .meme.meme-position span.top-caption {
+    top: 0;
+  }
+  .meme.meme-position span.bottom-caption {
+    bottom: 0;
+  }
+
+  /* flexbox */
+  .meme.meme-flexbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: url(chickenberry.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .meme.meme-flexbox img {
+    display: none;
+  }
+
+  .meme.meme-flexbox span {
+    text-align: center;
+  }
+
+  /* grid */
+  .meme.meme-grid {
+    display: block;
+
+    background: url(chickenberry.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .meme.meme-grid img {
+    display: none;
+  }
+
+  .meme.meme-grid span {
+    display: inline-block;
+    text-align: center;
+  }
+
+  .meme.meme-grid span.top-caption {
+    margin-top: 20px;
+  }
+  .meme.meme-grid span.bottom-caption {
+    margin-top: 200px;
+  }
