@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Events</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="events.js"></script>
+        <style type="text/css">
+          button {
+            padding: 15px;
+            margin: 15px;
+            width: 100%;
+          }
+        </style>
+    </head>
+    <body>
+      <div class="container">
+        <div class="row">
+          Попробуйте навести мышь на кнопки
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <button class="btn-mouse-over">
+              Mouse Over
+            </button>
+          </div>
+          <div class="col">
+            <button class="btn-mouse-out">
+              Mouse Out
+            </button>
+          </div>
+        </div>
+
+        <div class="row">
+          <p>
+          Попробуйте нажимать на кнопки. Например, сначала на алерт с задержкой, а потом на левую Click.
+          <p>
+          Обратите внимание на разницу между порядком
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <button class="btn-mouse-click">
+              Click
+            </button>
+          </div>
+          <div class="col">
+            <button class="btn-mouse-click-delay">
+              Click Delay
+            </button>
+          </div>
+          <div class="col">
+            <button class="btn-mouse-click-async-delay">
+              Click Async Delay
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </body>
+</html>
