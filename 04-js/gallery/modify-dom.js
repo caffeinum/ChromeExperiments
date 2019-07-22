@@ -24,3 +24,5 @@ const toggleLinksContainer = (show = true) => {
     link_container.style.display = 'none'
   }
 }
+
+window.onload = () => outputLinkList(links)

@@ -6,8 +6,9 @@ const syncDelay = (sec = 1) => {
 }
 
 setTimeout(() => {
-  console.log('1 second has passed!')
-}, 1000)
+  console.log('6 second has passed!')
+}, 6000)
 
 syncDelay(5)
+
 console.log('5 seconds has passed!')
