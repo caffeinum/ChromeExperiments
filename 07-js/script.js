@@ -1,59 +1,63 @@
 
+const loadUsers = () =>
+  fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response => response.json())
+    .then(users => showUsers(users))
 
-window.onload = () => {
-
-  const content_container = document.querySelector('#content')
+const showUsers = users => {
   const user_list_container = document.querySelector('.user-list')
   const user_template = document.querySelector('.user-list .user.template')
 
-  const loadUsers = () =>
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then(response => response.json())
-      .then(users => showUsers(users))
+  users.forEach(user => {
+    if (!user_template) return
 
-  const showUsers = users => {
+    const node = user_template.cloneNode(true)
 
-    users.forEach(user => {
-      const node = user_template.cloneNode(true)
+    console.log('user', user)
 
-      console.log('user', user)
+    node.classList.remove('template')
+    node.querySelector('.name').innerText = user.name
+    node.querySelector('.username').innerText = user.username
+    // node.querySelector('.avatar').src = user.image
 
-      node.classList.remove('template')
-      node.querySelector('.name').innerText = user.name
-      node.querySelector('.username').innerText = user.username
-      // node.querySelector('.avatar').src = user.image
+    user_list_container.appendChild(node)
+  })
+}
 
-      user_list_container.appendChild(node)
-    })
-  }
+const switchPage = (contentHtml) => {
+
+  const content_container = document.querySelector('#content')
+
+  content_container.innerHTML = contentHtml
+
+  setTimeout(() => loadUsers())
+}
+
+window.onload = () => {
 
   document.querySelectorAll('a').forEach(link => {
     link.onclick = event => {
       event.preventDefault()
-      console.log('event href', event.target.href)
 
-      fetch(event.target.href, { cors: true })
+      fetch(event.target.href)
         .then(response => response.text())
-        // .then(console.log)
         .then(html => {
           console.log('html', html)
 
-          const parser = new DOMParser();
+          const parser = new DOMParser()
 
           // Parse the text
-          const doc = parser.parseFromString(html, "text/html");
+          const doc = parser.parseFromString(html, "text/html")
 
           // You can now even select part of that html as you would in the regular DOM
           // Example:
-          const docArticle = doc.querySelector('#content').innerHTML;
+          const contentHtml = doc.querySelector('#content').innerHTML
 
-          content_container.innerHTML = docArticle;
-
+          switchPage(contentHtml)
         })
 
     }
   })
 
-  // loadUsers()
-  document.on('DOMContentLoaded', () => loadUsers())
+  loadUsers()
 }
