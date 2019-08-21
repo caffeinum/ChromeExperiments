@@ -37,6 +37,9 @@ window.onload = () => {
 
   document.querySelectorAll('a').forEach(link => {
     link.onclick = event => {
+      console.log('event', event)
+
+      console.log('url', event.target.href)
       event.preventDefault()
 
       fetch(event.target.href)
@@ -49,8 +52,6 @@ window.onload = () => {
           // Parse the text
           const doc = parser.parseFromString(html, "text/html")
 
-          // You can now even select part of that html as you would in the regular DOM
-          // Example:
           const contentHtml = doc.querySelector('#content').innerHTML
 
           switchPage(contentHtml)
